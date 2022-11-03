@@ -32,14 +32,14 @@
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    
 }
 
 
-/*Barra de navegación
+Barra de navegación
 ::-webkit-scrollbar {
     display: none;
-}*/
+}
 
 .resumen {
     display: grid;
