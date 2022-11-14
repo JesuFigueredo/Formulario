@@ -1,136 +1,99 @@
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+.navbar-global {
+    background-color: indigo;
 }
 
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
+.navbar-global .navbar-brand {
+    color: white;
 }
 
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
+.navbar-global .navbar-user>li>a {
+    color: white;
 }
 
-.nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
+.navbar-primary {
+    background-color: #333;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    top: 51px;
+    width: 200px;
+    z-index: 8;
+    overflow: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
-.nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    
+.navbar-primary.collapsed {
+    width: 60px;
 }
 
-::-webkit-scrollbar {
+.navbar-primary.collapsed .glyphicon {
+    font-size: 22px;
+}
+
+.navbar-primary.collapsed .nav-label {
     display: none;
 }
 
-.resumen {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 80px;
-    padding: 20px;
-
-}
-
-/* Rectangle 2 */
-.boxsuperior1 {
-    display: flex;
-    grid-column: 1;
-    grid-row: 1;
-    width: 300px;
-    height: 100px;
-    background-color: red;
-    border: 3px solid #000000;
-    border-radius: 15px 50px 30px;
-    box-shadow: 10px 10px;
-
-}
-
-.boxsuperior2 {
-    display: flex;
-    grid-column: 2;
-    grid-row: 1;
-    width: 300px;
-    height: 100px;
-    background-color: white;
-    border: 3px solid #000000;
-    border-radius: 15px 50px 30px;
-    box-shadow: 10px 10px
-}
-
-.boxsuperior3 {
-    display: flex;
-    grid-column: 3;
-    grid-row: 1;
-    width: 300px;
-    height: 100px;
-    background-color: yellow;
-    border: 3px solid #000000;
-    border-radius: 15px 50px 30px;
-    box-shadow: 10px 10px
-}
-
-.resumen img {
-    width: 80px;
-    height: 80px;
-
-}
-
-.resumen p {
-    display: flex;
-    height: 90px;
-
-    align-items: flex-end;
-    font-size: 50px;
-}
-
-.resumen .p2 {
-    display: flex;
-    height: 90px;
-    margin-right: ;
-    align-items: flex-end;
-    font-size: 50px;
-}
-
-.resumen h1 {
-    font-size: 25px;
-    color: #000000;
-
-
-}
-
-.resumen .contenedor{
-    grid-column: 1 / span 2;
-    grid-row: 2/ span 4 ;
-    width: 500px;
-    height: 400px;
-    background: #D9D9D9;
-    border-radius: 20px;
-    box-shadow: 10px 10px;
-    margin-top: 20px;
-    
-}
-.resumen .contenedor h1{
-    align-items: center;
+.btn-expand-collapse {
+    position: absolute;
+    display: block;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 0;
+    border-top: solid 1px #666;
+    color: grey;
+    font-size: 20px;
     text-align: center;
-    font-size: 30px;
-    padding: 10px;
-    
 }
 
+.btn-expand-collapse:hover,
+.btn-expand-collapse:focus {
+    background-color: #222;
+    color: white;
+}
+
+.btn-expand-collapse:active {
+    background-color: #111;
+}
+
+.navbar-primary-menu,
+.navbar-primary-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-primary-menu li a {
+    display: block;
+    padding: 10px 18px;
+    text-align: left;
+    border-bottom: solid 1px #444;
+    color: #ccc;
+}
+
+.navbar-primary-menu li a:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-primary-menu li a .glyphicon {
+    margin-right: 6px;
+}
+
+.navbar-primary-menu li a:hover .glyphicon {
+    color: orchid;
+}
+
+.main-content {
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.collapsed+.main-content {
+    margin-left: 60px;
+}
