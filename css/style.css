@@ -107,8 +107,8 @@ main {
 .navbar {
     grid-column: 2/ span 3;
     grid-row: 1;
-    position: fixed;
-    left: 180px;
+    /*position: fixed;
+    left: 180px;*/
     height: 50px;
     width: 1095px;
 
