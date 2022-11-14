@@ -21,8 +21,8 @@
 
 
   <main>
-    <div class="p-4 bg-white" style="width: 180px;">
-      <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+    <div class="p-4 bg-white" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-info-square-fill" viewBox="0 0 16 16">
           <path
@@ -48,7 +48,7 @@
           </div>
         </li>
 
-        <li class="border-top my-3"></li>
+
         <li class="mb-1">
           <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
             data-bs-target="#account-collapse" aria-expanded="false">
@@ -65,9 +65,10 @@
         </li>
       </ul>
     </div>
+
     <div class="b-divider"></div>
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 ">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
             fill="currentColor" class="bi bi-ui-radios" viewBox="0 0 16 16">
@@ -113,10 +114,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-fill" viewBox="0 0 16 16">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                 </svg></a>
             </li>
           </ul>
@@ -132,34 +132,53 @@
       <div class="box1">
         <div class="titulo">
           <h1>Avisos</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+        </div>
+        <div class="iconos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+            class="bi bi-exclamation-octagon" viewBox="0 0 16 16">
             <path
-              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+              d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353L4.54.146zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1H5.1z" />
+            <path
+              d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
           </svg>
-          <p>721K</p>
-
-
 
         </div>
+        <div class="texto">27</div>
+
       </div>
       <div class="box2">
         <div class="titulo">
-          <h1>Téc. Propio</h1>
+          <h1>T. Propios</h1>
         </div>
-        <div>
-          <p>10K</p>
+        <div class="iconos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-fill"
+            viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+          </svg>
         </div>
+        <div class="texto">10</div>
+
       </div>
-      <div class="box3">
+      <div class="box3 ">
         <div class="titulo">
-          <h1>Téc. Proovedor</h1>
+          <h1>T. Provider</h1>
         </div>
-        <div>
-          <p>45K</p>
+        <div class="iconos">
+          <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+            class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+            <path
+              d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+          </svg>
         </div>
+        <div class="texto">27</div>
       </div>
     </div>
+    <div class="grafico">
+      <canvas id="grafica"></canvas>
+    </div>
+
 
 
   </main>
@@ -174,6 +193,10 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <script src="/js/sidebars.js"></script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <script src="js/grafica.js"></script>
 </body>
 
 </html>

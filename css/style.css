@@ -2,26 +2,28 @@
 
 body {
     min-height: 100vh;
-    min-height: -webkit-fill-available;
+
+
 }
 
-html {
-    height: -webkit-fill-available;
-}
+html {}
 
 main {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    grid-template-rows: 15%;
+    grid-template-columns: 180px 1fr 1fr;
+    grid-template-rows: 15% 20% 20% 20% 25%;
     height: 100vh;
     height: -webkit-fill-available;
     max-height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /*overflow-x: auto;*/
+    overflow-y: auto;
+    position: relative;
 }
 
 .b-divider {
     flex-shrink: 0;
+    grid-column: 2;
+    grid-row: 1 / span 3;
     width: 0.05rem;
     height: 100vh;
     background-color: rgba(0, 0, 0, .1);
@@ -91,7 +93,7 @@ main {
 }
 
 .scrollarea {
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .fw-semibold {
@@ -103,72 +105,118 @@ main {
 }
 
 .navbar {
-    grid-column: 2/ span 5;
+    grid-column: 2/ span 3;
     grid-row: 1;
-
+    position: fixed;
+    left: 180px;
     height: 50px;
-    width: 100%;
+    width: 1095px;
+
+
+    margin: 0 auto;
     padding: 5px;
 }
 
 .contenedor {
-    grid-column: 2;
+    grid-column: 2 / span 3;
+    grid-row: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+
     column-gap: 5%;
 
     width: 90%;
-    height: 112px;
+
 
     margin-left: 50px;
+
+
 }
 
 .contenedor .box1 {
     grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
     width: 100%;
     height: 112px;
     background: #E3F5FF;
     border-radius: 16px;
     padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+.contenedor .iconos {
+    grid-column: 3;
+    grid-row: 1/span 2;
+    margin: 10%;
+    overflow: hidden;
+
 
 }
 
 .contenedor .box2 {
     grid-column: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
     width: 100%;
+    height: 112px;
     background: #E5ECF6;
     border-radius: 16px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
+
+
 
 .contenedor .box3 {
     grid-column: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
     width: 100%;
+    height: 112px;
     background: #E3F5FF;
-    ;
     border-radius: 16px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
 
 .contenedor h1 {
-    font-family: 'Inter';
-    font-style: normal;
-}
-
-.contenedor p {
-    flex-direction: column;
-
-
-    font-family: 'Inter';
-    font-style: bold;
     font-size: 30px;
-    margin-left: 10px;
 }
 
+.contenedor .texto {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+.grafico {
+
+    grid-column: 2/ span 3;
+    grid-row: 3/span 4;
 
 
+
+    column-gap: 5%;
+    margin-top: 30px;
+    width: 90%;
+    margin-bottom: 30px;
+
+
+    margin-left: 50px;
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
 
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
