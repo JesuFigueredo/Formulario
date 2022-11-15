@@ -249,6 +249,7 @@ main {
 
 }
 
+
 .tabla1 .encabezado {
     display: flex;
     flex-direction: row;
@@ -285,4 +286,11 @@ main {
 
 .dropdown2 .item3:hover {
     font-size: 25px;
+}
+
+.popover-body .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
 }

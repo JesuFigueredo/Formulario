@@ -11,15 +11,18 @@
   <!--Titulo-->
   <title>Formulario Web Dashboard</title>
   <!--Porbar borrar-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
   <!--Estilo Externos-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/notif.css">
 
 </head>
 
@@ -48,7 +51,7 @@
             </button>
             <div class="collapse show" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded activo">Home</a></li>
+                <li><a href="#" class="link-dark rounded" style="color: green;">Home</a></li>
                 <li><a href="#" class="link-dark rounded">Formulario</a></li>
                 <li><a href="#" class="link-dark rounded">Registros</a></li>
 
@@ -109,24 +112,20 @@
             <form class="d-flex">
               <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success " type="submit"><i class="bi bi-search"></i></button>
               </div>
             </form>
             <ul class="navbar-nav mb-1 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-                  </svg></a>
+                <a class="nav-link" tabindex="-1" aria-disabled="true" href="#"><i
+                    class="bi bi-brightness-high"></i></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                  </svg></a>
+                <a class="nav-link" tabindex="-1" onclick="prueba()" aria-disabled="true" href="#">
+                  <i class="bi bi-bell">
+
+
+                  </i></a>
               </li>
             </ul>
 
@@ -138,6 +137,54 @@
 
 
 
+    </div>
+    <!--ModalAgregar-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="recipient-name" class="col-form-label">Aviso:</label>
+
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="col-md-4">
+                  <label for="recipient-name" class="col-form-label">Técnico:</label>
+
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="col-md-4">
+                  <label for="recipient-name" class="col-form-label">Tarea:</label>
+
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Población:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Dirección:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Comentario:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!--Contenedores-->
     <div class="contenedor">
@@ -195,13 +242,27 @@
     <div class="tabla1">
       <div class="encabezado">
         <h3>Últimos Registros</h3>
-        <button type="button" class="btn btn-outline-success btn-sm "><svg xmlns="http://www.w3.org/2000/svg" width="16"
-            height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+        <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal"
+          data-bs-target=" #exampleModal" data-bs-whatever="@mdo" tabindex="0" data-toggle="popover"
+          data-trigger="focus" data-popover-content="#a2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
           </svg>
 
         </button>
+        <div id="a2" style="display: none;">
+          <div class="popover-heading">Crea un Registro</div>
+
+          <div class="popover-body">
+            Se crea un nuevo registro de manera rápida con la <b>Fecha</b> y <b>Hora</b> de ahora.
+            <div class="date">
+              <p id="fecha">
+                00/00/00-</p>
+              <p id="reloj">00 : 00</p>
+            </div>
+          </div>
+        </div>
       </div>
       <table class="table table-hover">
         <thead>
@@ -257,20 +318,23 @@
 
 
 
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
+
   <script src="js/sidebars.js"></script>
+  <!--Tres puntos-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.bundle.min.js"></script>
 
-
+  <script src="js/main.js"></script>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
   <script src="js/grafica.js"></script>
+
+
 </body>
 
 </html>
