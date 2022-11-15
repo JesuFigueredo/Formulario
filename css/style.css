@@ -258,19 +258,31 @@ main {
 
 }
 
-.dropdown-item {
+.dropdown2 {
+    align-items: center;
     text-align: center;
-    align-items: left;
 }
 
-.dropdown-menu .item1:hover {
-    color: #061596;
+.dropdown2 .item1 {
+    color: rgb(205, 135, 50);
 }
 
-.dropdown-menu .item2:hover {
-    color: #ff0000;
+.dropdown2 .item2 {
+    color: red;
 }
 
-.dropdown-menu .item3:hover {
-    color: #00ff48;
+.dropdown2 .item3 {
+    color: green;
+}
+
+.dropdown2 .item1:hover {
+    font-size: 25px;
+}
+
+.dropdown2 .item2:hover {
+    font-size: 25px;
+}
+
+.dropdown2 .item3:hover {
+    font-size: 25px;
 }
