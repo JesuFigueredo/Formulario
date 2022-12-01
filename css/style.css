@@ -15,6 +15,7 @@ body {
     min-height: 100%;
 }
 
+
 main {
     display: grid;
     grid-template-columns: 180px auto auto auto;
@@ -310,8 +311,6 @@ main {
 
 }
 
-
-
 .formulario .valores {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -319,6 +318,8 @@ main {
     margin: 5%;
     row-gap: 8px;
     justify-content: center;
+
+
 
 }
 
@@ -328,6 +329,7 @@ select {
     height: 40px;
     border: 1% black;
     border-radius: 5px;
+    padding-left: 2%;
 }
 
 .formulario .valores .item5 {
@@ -371,4 +373,48 @@ select {
 .formulario .guardar {
     margin-bottom: 3%;
     margin-left: 45%;
+}
+
+.tablaregistro {
+    grid-column: 2/span 3;
+    grid-row: 2/span 4;
+    column-gap: 5%;
+    margin-top: 5%;
+
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.search {
+
+    top: 6px;
+    left: 10px;
+}
+
+.form-control {
+
+    border: none;
+    padding-left: 32px;
+}
+
+.form-control:focus {
+
+    border: none;
+    box-shadow: none;
+}
+
+.green {
+
+    color: green;
 }

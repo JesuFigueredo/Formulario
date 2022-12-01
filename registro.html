@@ -107,7 +107,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Formulario</a>
+                                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Registros</a>
                             </li>
                         </ul>
 
@@ -191,43 +191,115 @@
             </div>
         </div>
         <!--Contenedores-->
-        <div class="formulario">
-            <div class="valores">
-                <div class="item1">
-                    <h4>Fecha y Hora</h4>
-                    <input type="datetime-local" id="fecha_hora">
+        <div class="tablaregistro">
+            <div class="container mt-5 px-2">
+
+                <div class="mb-2 d-flex justify-content-between align-items-center">
+
+                    <div class="position-relative">
+                        <span class="position-absolute search"><i class="fa fa-search"></i></span>
+                        <input class="form-control w-100" placeholder="Search by order#, name...">
+                    </div>
+
+                    <div class="px-2">
+
+                        <span>Filters <i class="fa fa-angle-down"></i></span>
+                        <i class="fa fa-ellipsis-h ms-3"></i>
+                    </div>
+
                 </div>
-                <div class="item2">
-                    <h4>N. de Aviso</h4>
-                    <input type="text">
-                </div>
-                <div class="item3">
-                    <h4>Técnico</h4>
-                    <select name="select">
-                        <option value="value1" selected>Seleccionar</option>
-                        <option value="value2">T.Propio</option>
-                        <option value="value3">T.Proveedor</option>
-                    </select>
-                </div>
-                <div class="item4">
-                    <h4>Tarea</h4>
-                    <input type="text">
-                </div>
-                <div class="item5">
-                    <h4>Población</h4>
-                    <input type="text">
-                </div>
-                <div class="item6">
-                    <h4>Dirección</h4>
-                    <input type="text">
-                </div>
-                <div class="item7">
-                    <h4>Comentarios</h4>
-                    <input type="text">
+                <div class="table-responsive">
+                    <table class="table table-responsive table-borderless">
+
+                        <thead>
+                            <tr class="bg-light">
+                                <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                                <th scope="col" width="5%">#</th>
+                                <th scope="col" width="10%">N.Aviso</th>
+                                <th scope="col" width="15%">Fecha/Hora</th>
+                                <th scope="col" width="20%">Técnico</th>
+                                <th scope="col" width="20%">Tarea</th>
+                                <th scope="col" width="20%">Población</th>
+                                <th scope="col" width="20%">Dirección</th>
+                                <th scope="col" width="20%">Comentario</th>
+                                <th scope="col" class="text-end" width="20%"><span>Acciones</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                                <td>12</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
+
+                                <td>Wirecard for figma</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                                <td>12</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
+
+                                <td>Wirecard for figma</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                                <td>12</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
+
+                                <td>Wirecard for figma</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                                <td>12</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
+
+                                <td>Wirecard for figma</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                                <td>12</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td>1 Oct, 21</td>
+                                <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
+
+                                <td>Wirecard for figma</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
                 </div>
 
             </div>
-            <button type="button" class="btn btn-success guardar">Guardar</button>
+        </div>
 
         </div>
 
@@ -251,10 +323,10 @@
 
 
 
-    <script src="js/hora.js"></script>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 
-
+    <script src="tabla.js"></script>
 
 </body>
 
