@@ -206,8 +206,21 @@
 
                     <div class="px-2">
 
-                        <span>Filters <i class="fa fa-angle-down"></i></span>
-                        <i class="fa fa-ellipsis-h ms-3"></i>
+                        <div class="dropdown dropstart text-end">
+                            <button type="button" class="btn btn-dark dropdown-toggle " id="dropdownMenuButton1"
+                                aria-expanded="false" data-bs-toggle="dropdown">
+                                Opciones
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">New Form</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-light">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Exp. Todo</a></li>
+                                <li><a class="dropdown-item" href="#">Borr. Todo</a></li>
+
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
@@ -258,7 +271,7 @@
                                                 Editar</a>
                                             <a class="dropdown-item item2" href="#"><i class="bi bi-trash"></i>
                                                 Borrar</a>
-                                            <a class="dropdown-item item3" href="#"><i
+                                            <a class="dropdown-item item3" href="#" id="export"><i
                                                     class="bi bi-box-arrow-in-down"></i> Exportar</a>
                                         </div>
                                 </td>
@@ -331,7 +344,8 @@
 
                 </div>
                 <div class="buttonguardar">
-                    <button type="button" class="btn btn-danger ms-2">Borrar</button>
+
+
                     <button type="button" class="btn btn-success ms-2 ">Guardar</button>
                 </div>
 
@@ -369,6 +383,9 @@
     <script src="https://cdn.datatables.net/v/dt/dt-1.13.1/datatables.min.js"></script>
 
     <script src="js/tabla.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="js/export.js"></script>
 
 </body>
 

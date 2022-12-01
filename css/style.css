@@ -315,9 +315,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
-    margin: 5%;
+    margin-left: 2%;
     row-gap: 8px;
     justify-content: center;
+    margin: 4%;
 
 
 
@@ -328,9 +329,11 @@ main {
 textarea {
     width: 250px;
     height: 40px;
-    border: 1% black;
+    border-width: 2px;
     border-radius: 5px;
     padding-left: 2%;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .dataTables_length {
@@ -371,9 +374,9 @@ textarea {
 
 .formulario .valores .item7 textarea {
     grid-column: 1 / span 2;
-    width: 200%;
+    width: 190%;
     height: 100px;
-    border: 1% black;
+
     border-radius: 5px;
     padding-left: 2%;
 }
@@ -390,7 +393,7 @@ textarea {
     margin-top: 5%;
 
     margin-bottom: 30px;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-right: 50px;
     background: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -405,7 +408,6 @@ body {
 }
 
 .search {
-
     top: 6px;
     left: 10px;
 }
@@ -434,6 +436,7 @@ body {
     justify-content: right;
     margin-top: 1%;
     margin-bottom: 1%;
+
 
 }
 
