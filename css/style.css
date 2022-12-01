@@ -5,9 +5,9 @@
 
 }
 
-html {
+/*html {
     height: 100%;
-}
+}*/
 
 body {
 
@@ -293,4 +293,82 @@ main {
     flex-direction: row;
     justify-content: space-around;
     font-size: 20px;
+}
+
+.formulario {
+    grid-column: 2/span 3;
+    grid-row: 2/span 4;
+    column-gap: 5%;
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+
+}
+
+
+
+.formulario .valores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    margin: 5%;
+    row-gap: 8px;
+    justify-content: center;
+
+}
+
+.formulario .valores input,
+select {
+    width: 250px;
+    height: 40px;
+    border: 1% black;
+    border-radius: 5px;
+}
+
+.formulario .valores .item5 {
+    grid-column: 1/span 2;
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.formulario .valores .item5 input {
+    width: 500px;
+    margin-right: 12%;
+}
+
+.formulario .valores .item6 {
+    grid-column: 1/span 2;
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.formulario .valores .item6 input {
+    width: 500px;
+    margin-right: 12%;
+}
+
+.formulario .valores .item7 {
+    margin-top: 5%;
+}
+
+.formulario .valores .item7 input {
+    grid-column: 1 / span 2;
+    width: 200%;
+    height: 100px;
+}
+
+.formulario .guardar {
+    margin-bottom: 3%;
+    margin-left: 45%;
 }

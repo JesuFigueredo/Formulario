@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Metadatos-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario Web Dashboard">
+    <meta name="author" content="">
+    <!--Titulo-->
+    <title>Formulario Web Dashboard</title>
+    <!--Porbar borrar-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!--Estilo Externos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notif.css">
+
+</head>
+
+<body>
+
+
+    <main>
+        <!--Barra lateral-->
+        <div class="barralateral">
+            <div class="p-4 bg-white lateral">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+
+                    <span class="fs-5 fw-semibold">Formulario</span>
+                </a>
+                <ul class="list-unstyled ps-0">
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="true">
+                            Dashboard
+                        </button>
+                        <div class="collapse show" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="index.html" class="link-dark rounded">Home</a></li>
+                                <li><a href="" class="link-dark rounded">Formulario</a></li>
+                                <li><a href="#" class="link-dark rounded">Registros</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#account-collapse" aria-expanded="false">
+                            Cuenta
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">New...</a></li>
+                                <li><a href="#" class="link-dark rounded">Profile</a></li>
+                                <li><a href="#" class="link-dark rounded">Settings</a></li>
+                                <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <!--Barra horizontal-->
+        <div class="barrahorizontal">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-ui-radios" viewBox="0 0 16 16">
+                            <path
+                                d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM0 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm7-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM3 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                        </svg></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-star" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Dashboard /
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Formulario</a>
+                            </li>
+                        </ul>
+
+
+                        <form class="d-flex">
+                            <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-success " type="submit"><i
+                                        class="bi bi-search"></i></button>
+                            </div>
+                        </form>
+                        <ul class="navbar-nav mb-1 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link" tabindex="-1" aria-disabled="true" href="#"><i
+                                        class="bi bi-brightness-high"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" tabindex="-1" onclick="prueba()" aria-disabled="true" href="#">
+                                    <i class="bi bi-bell">
+
+
+                                    </i></a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+        </div>
+        <!--ModalAgregar-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Registro</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="recipient-name" class="col-form-label">Aviso:</label>
+
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="recipient-name" class="col-form-label">Técnico:</label>
+
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="recipient-name" class="col-form-label">Tarea:</label>
+
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Población:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Dirección:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Comentario:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contenedores-->
+        <div class="formulario">
+            <div class="valores">
+                <div class="item1">
+                    <h4>Fecha y Hora</h4>
+                    <input type="datetime-local" id="fecha_hora">
+                </div>
+                <div class="item2">
+                    <h4>N. de Aviso</h4>
+                    <input type="text">
+                </div>
+                <div class="item3">
+                    <h4>Técnico</h4>
+                    <select name="select">
+                        <option value="value1" selected>Seleccionar</option>
+                        <option value="value2">T.Propio</option>
+                        <option value="value3">T.Proveedor</option>
+                    </select>
+                </div>
+                <div class="item4">
+                    <h4>Tarea</h4>
+                    <input type="text">
+                </div>
+                <div class="item5">
+                    <h4>Población</h4>
+                    <input type="text">
+                </div>
+                <div class="item6">
+                    <h4>Dirección</h4>
+                    <input type="text">
+                </div>
+                <div class="item7">
+                    <h4>Comentarios</h4>
+                    <input type="text">
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-success guardar">Guardar</button>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+
+    <script src="js/sidebars.js"></script>
+
+
+
+    <script src="js/hora.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+
+
+
+</body>
+
+</html>
