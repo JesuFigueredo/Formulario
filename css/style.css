@@ -412,13 +412,13 @@ body {
     left: 10px;
 }
 
-.form-control {
+.buscar {
 
     border: none;
     padding-left: 32px;
 }
 
-.form-control:focus {
+.buscar:focus {
 
     border: none;
     box-shadow: none;
@@ -442,4 +442,12 @@ body {
 
 .t2 {
     cursor: pointer;
+}
+
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: 0.25;
 }

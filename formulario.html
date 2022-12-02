@@ -125,8 +125,13 @@
                                         class="bi bi-brightness-high"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" tabindex="-1" onclick="prueba()" aria-disabled="true" href="#">
+                                <a class="nav-link" tabindex="-1" data-bs-toggle="offcanvas" href="#offcanvasScrolling"
+                                    role="button" aria-controls="offcanvasScrolling" aria-disabled="true">
                                     <i class="bi bi-bell">
+                                        <span class="position-absolute translate-middle badge rounded-pill bg-success">
+                                            10
+
+                                        </span>
 
 
                                     </i></a>
@@ -187,6 +192,35 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Send message</button>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!--ModalNotifi-->
+        <div class="offcanvas offcanvas-end text-bg-dark w-25" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notificaciones</h5>
+                <button type="button" class="btn-close btn-close-white text-reset " data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repudiandae dolorum cum nemo tempore,
+                    quia atque
+                    consectetur, pariatur exercitationem quasi officia eveniet? Nemo excepturi sint labore commodi,
+                    optio incidunt
+                    nesciunt.
+                </div>
+
+            </div>
+
+            <div class="offcanvas-body">
+                <hr class="bg-danger border-2 border-top border-danger">
+                <div class="dropdown mt-3">
+                    <button class="btn btn-danger" type="button">
+                        Limpiar
+                    </button>
+
                 </div>
             </div>
         </div>

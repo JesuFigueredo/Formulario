@@ -46,9 +46,22 @@ var year = today.getFullYear();
 var dia = day + "/" + month + "/" + year;
 var fecha = document.getElementById("fecha").innerText = dia; //buscar elemento fecha
 
+$('#reload').hide()
 
 
 
+function recargar() {
+
+    const boton = document.getElementById("enviar");
+
+
+    boton.disabled = true;
+    boton.style.opacity = 0.7;
+
+    $('#reload').show();
 
 
 
+}
+
+document.getElementById("enviar").addEventListener("click", recargar);
