@@ -1,7 +1,5 @@
 const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-
 const graph = document.querySelector("#grafica");
-
 const data = {
     labels: labels,
 
