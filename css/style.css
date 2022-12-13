@@ -29,8 +29,8 @@ header {
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto;
+    transition-property: all 4s;
 
-    transition: all .5s ease-out;
 }
 
 
@@ -41,15 +41,18 @@ header .welcome-back {
     margin-top: 50%;
     align-items: center;
     text-align: center;
+
 }
 
 .message {
-    padding: 1rem;
+    padding: 10%;
 }
 
 .message h2 {
     font-size: 1.7rem;
     padding: 1rem 0;
+    transition: opacity .35s;
+
 }
 
 .message button {
@@ -62,7 +65,9 @@ header .welcome-back {
     cursor: pointer;
     font-size: .9rem;
     margin-top: 2rem;
-    transition: all .3s ease-in;
+    transition: opacity .35s;
+
+
     color: #fff;
 }
 
@@ -80,6 +85,7 @@ header .welcome-back {
     background-color: rgb(51, 51, 51, 0.602);
     text-align: center;
     border-radius: 10%;
+
 }
 
 
@@ -133,6 +139,7 @@ header .welcome-back {
     padding: .2rem 0;
     font-size: .9rem;
     color: white;
+
 }
 
 
@@ -172,4 +179,47 @@ header .welcome-back {
 .sign-up {
     opacity: 1;
     visibility: visible;
+}
+
+
+/*Display max 480px*/
+@media screen and (max-width: 780px) {
+    .container-form {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
+    .message {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .formulario {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .container-form {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+
+    }
+
+    .message {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: center;
+        margin-top: 50%;
+    }
+
+    .formulario {
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: center;
+        margin-top: 30%;
+    }
 }
