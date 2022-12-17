@@ -30,7 +30,7 @@ function actual() {
     }
 
     //devolver los datos:
-    mireloj = hora + " : " + minuto;
+    mireloj = hora + ":" + minuto + ":00";
     return mireloj;
 }
 function actualizar() { //función del temporizador
@@ -45,7 +45,7 @@ var today = new Date();
 var day = today.getDate();
 var month = today.getMonth() + 1;
 var year = today.getFullYear();
-var dia = day + "/" + month + "/" + year;
+var dia = year + "-" + month + "-" + day;
 var fecha = document.getElementById("fecha").innerText = dia; //buscar elemento fecha
 
 $('#reload').hide()
@@ -55,17 +55,146 @@ $('#reload').hide()
 function recargar() {
 
     const boton = document.getElementById("enviar");
+    var botonfast = document.getElementById("registrofast");
+    var hora = document.getElementById("reloj");
+    var fast = document.getElementById("fast");
+    var datetime = dia + " " + hora.childNodes[0].textContent;
+    //const date = new Date(datetime);
+    const d = new Date(dia + "T" + hora.childNodes[0].textContent);
+    var aviso = document.getElementById("aviso");
+    var tecnico = document.getElementById("select");
+    var tarea = document.getElementById("tarea");
+    var poblacion = document.getElementById("poblacion");
+    var direccion = document.getElementById("direccion");
+    var comentario = document.getElementById("comentario");
+
+
+
+
+
+    //console.log(dia, hora.childNodes[0].textContent);
+    async function sendData(fast) {
+        var raw = JSON.stringify({
+            "data": {
+                "datetime": Date.parse(d),
+                "numberwarning": aviso.value,
+                "technical": tecnico.value,
+                "task": tarea.value,
+                "population": poblacion.value,
+                "address": direccion.value,
+                "comment": comentario.value,
+                "modific": Date.parse(d)
+
+            }
+        });
+        var salida;
+        let titulo;
+        var button;
+        try {
+            const formData = new FormData(fast)
+            const queryString = new URLSearchParams(formData).toString()
+            const response = await fetch(enlace + "/warnings", {
+                method: "POST",
+                body: raw, headers: {
+                    "Authorization": "Bearer " + gettoken,
+                    "Content-Type": "application/json"
+                },
+
+
+            });
+
+
+            if (!response.ok) {
+                const message = response.status;
+                titulo = "error";
+                button = true;
+
+                switch (message) {
+                    case 400:
+                        salida = "Error al enviar los datos";
+                        break;
+                    case 404:
+                        salida = "no se ha encontrado la web";
+                        break;
+
+                    default:
+                        salida = "Error desconocido";
+                        break;
+                }
+
+
+
+                throw new Error(message);
+            } else {
+                titulo = "success";
+                salida = "Registro completado";
+                button = false;
+
+            }
+        } catch (error) {
+
+            console.log(error);
+        }
+
+        function pregunta() {
+
+            swal({
+                title: titulo,
+                text: salida,
+                type: titulo,
+                timer: 2000,
+                showConfirmButton: button
+            }, function () {
+
+                if (button == false) {
+                    location.reload();
+                }
+
+
+
+            });
+        }
+        setTimeout(function () {
+            //location.reload();
+
+            pregunta();
+            $('#reload').hide();
+            boton.disabled = false;
+            boton.style.opacity = 1;
+        }, 1000)
+    }
+    sendData(fast);
+
+
+
+
 
 
     boton.disabled = true;
     boton.style.opacity = 0.7;
-
     $('#reload').show();
+
+
+    /*if (toastTrigger) {
+        toastTrigger.addEventListener('click', () => {
+
+
+
+        })
+    }*/
+
+
 
 
 
 }
 
+
+
+
+
 document.getElementById("enviar").addEventListener("click", recargar);
+
+
 
 

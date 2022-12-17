@@ -1,6 +1,5 @@
 const login = document.getElementById("form");
 var gettoken = localStorage.getItem("data_token");
-const enlace = "http://localhost:1337/api";
 var respuesta = enlace + "/warnings";
 
 

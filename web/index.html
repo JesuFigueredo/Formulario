@@ -13,6 +13,8 @@
 
   <!--Estilo Externos-->
   <link rel="stylesheet" href="../css/styleweb.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
   <!--<link rel="stylesheet" href="../css/particulas.css"> en caso de poner fondo negro-->
 
 
@@ -140,41 +142,47 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="fast">
               <div class="row">
                 <div class="col-md-4">
                   <label for="recipient-name" class="col-form-label">Aviso:</label>
 
-                  <input type="text" class="form-control" id="recipient-name">
+                  <input type="text" class="form-control" id="aviso" name="aviso" required>
                 </div>
                 <div class="col-md-4">
                   <label for="recipient-name" class="col-form-label">Técnico:</label>
 
-                  <input type="text" class="form-control" id="recipient-name">
+
+                  <select name="select" class=" form-control" id="select" name="select" required>
+                    <option selected disabled>Seleccionar</option>
+                    <option value="self">T.Propio</option>
+                    <option value="supplier">T.Proveedor</option>
+                  </select>
                 </div>
                 <div class="col-md-4">
                   <label for="recipient-name" class="col-form-label">Tarea:</label>
 
-                  <input type="text" class="form-control" id="recipient-name">
+                  <input type="text" class="form-control" id="tarea" name="tarea" required>
                 </div>
               </div>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Población:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="poblacion" name="poblacion" required>
+
               </div>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Dirección:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Comentario:</label>
-                <input type="text" class="form-control" id="recipient-name">
+                <input type="text" class="form-control" id="comentario" name="comentario">
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button class="btn btn-primary" type="button" id="enviar">
+            <button class="btn btn-primary" type="submit" id="enviar">
 
               Enviar
               <span class="spinner-border spinner-border-sm" id="reload" role="status" aria-hidden="true"></span>
@@ -211,17 +219,7 @@
         </div>
       </div>
     </div>
-    <!--ModalNotifialert
-    <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="d-flex">
-        <div class="toast-body">
-          Hello, world! This is a toast message.
-        </div>
-        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-    </div>-->
-
-
+    <div id="mensaje"></div>
     <!--Contenedores-->
     <div class="contenedor">
       <div class="box1">
@@ -238,7 +236,7 @@
           </svg>
 
         </div>
-        <div class="texto" id="avisocantidad"></div>
+        <div class="texto" id="avisocantidad">0</div>
 
       </div>
       <div class="box2">
@@ -251,7 +249,7 @@
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
           </svg>
         </div>
-        <div class="texto" id="mostrar1"></div>
+        <div class="texto" id="mostrar1">0</div>
 
       </div>
       <div class="box3 ">
@@ -267,7 +265,7 @@
               d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
           </svg>
         </div>
-        <div class="texto" id="mostrar2">27</div>
+        <div class="texto" id="mostrar2">0</div>
       </div>
     </div>
     <!--Grafico de barra-->
@@ -288,19 +286,19 @@
 
         </button>
         <div id="a2" style="display: none;">
-          <div class="popover-heading">Crea un Registro</div>
+          <div class="popover-heading" id="registrofast">Crea un Registro</div>
 
           <div class="popover-body">
             Se crea un nuevo registro de manera rápida con la <b>Fecha</b> y <b>Hora</b> de ahora.
             <div class="date">
               <p id="fecha">
-                00/00/00-</p>
+                0000-00-00-</p>
               <p id="reloj">00 : 00</p>
             </div>
           </div>
         </div>
       </div>
-      <table class="table table-hover">
+      <table class="table table-hover table-sm-responsive">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -315,18 +313,7 @@
           </tr>
         </thead>
         <tbody id="tabla">
-          <tr>
-            <th scope="row">1</th>
-            <td>text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>Text</td>
-            <td>
 
-            </td>
           </tr>
         </tbody>
       </table>
@@ -347,14 +334,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
-  <script src="../js/main.js"></script>
   <script src="../js/grafica.js"></script>
-
+  <script src="../js/newregistro.js"></script>
   <script src="../js/dark.js"></script>
   <script src="../js/start.js"></script>
   <script src="../js/ultimoregistro.js"></script>
   <script src="../js/export.js"></script>
+  <script src="../js/main.js"></script>
 
 
 
