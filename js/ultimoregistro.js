@@ -1,7 +1,7 @@
 async function registros() {
     try {
         const formData = new FormData()
-        const response = await fetch(enlace + "/warnings?sort[0]=datetime%3Adesc&pagination[pageSize]=5", {
+        const response = await fetch(enlace + "/warnings?sort[0]=createdAt%3Adesc&pagination[pageSize]=5", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + gettoken,

@@ -17,7 +17,7 @@ async function send1() {
         if (!response.ok) {
             if (response.status == 401) {
                 localStorage.removeItem("data_token")
-
+                window.location.href = "../"
             } else {
                 const message = `Error: ${response.status}`;
                 throw new Error(message);

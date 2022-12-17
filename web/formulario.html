@@ -12,6 +12,11 @@
     <title>Formulario Web Dashboard</title>
     <!--Estilo Externos-->
     <link rel="stylesheet" href="../css/styleweb.css">
+    <script src="../js/home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3447/3447560.png" type="image/x-icon">
+
 
 
 </head>
@@ -42,7 +47,8 @@
                         <div class="collapse show" id="dashboard-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="index.html" class="link-dark rounded">Home</a></li>
-                                <li><a href="formulario.html" class="link-dark rounded">Formulario</a></li>
+                                <li><a href="formulario.html" class="link-dark rounded"
+                                        style="background-color: green;">Formulario</a></li>
                                 <li><a href="registro.html" class="link-dark rounded">Registros</a></li>
 
                             </ul>
@@ -57,10 +63,44 @@
                         </button>
                         <div class="collapse" id="account-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">New...</a></li>
-                                <li><a href="#" class="link-dark rounded">Profile</a></li>
-                                <li><a href="#" class="link-dark rounded">Settings</a></li>
                                 <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-4 bg-white lateral1">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                    <span class="fs-5 fw-semibold"><i class="bi bi-ui-checks-grid"></i></span>
+                </a>
+                <ul class="list-unstyled ps-0">
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="true">
+                            <i class="bi bi-collection-fill"></i>
+                        </button>
+                        <div class="collapse show" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="index.html" class="link-dark rounded"><i class="bi bi-house-fill"></i></a>
+                                </li>
+                                <li><a href="#" class="link-dark rounded" style="background-color: green;"><i
+                                            class="bi bi-ui-checks-grid"></i></a></li>
+                                <li><a href="registro.html" class="link-dark rounded"><i
+                                            class="bi bi-card-checklist"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#account-collapse" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+                                <li><a href="#" class="link-dark rounded"><i class="bi bi-box-arrow-left"></i></a></li>
                             </ul>
                         </div>
                     </li>
@@ -229,10 +269,10 @@
                     </div>
                     <div class="item3">
                         <h4>Técnico</h4>
-                        <select name="select" class="select1" id="select" name="select" required>
-                            <option value="value1" selected disabled>Seleccionar</option>
-                            <option value="value2">T.Propio</option>
-                            <option value="value3">T.Proveedor</option>
+                        <select name="select" class="select1" id="select" required>
+                            <option selected disabled>Seleccionar</option>
+                            <option value="self">T.Propio</option>
+                            <option value="supplier">T.Proveedor</option>
                         </select>
                     </div>
                     <div class="item4">
@@ -250,7 +290,7 @@
                     <div class=" item7">
                         <h4>Comentarios</h4>
                         <textarea name="comentarios" rows="10" cols="40"
-                            placeholder="Escribe tu comentario, no es un campo requerido " id="comentarios"></textarea>
+                            placeholder="Escribe tu comentario, no es un campo requerido " id="comentario"></textarea>
                     </div>
 
                 </div>
@@ -266,7 +306,7 @@
 
     </main>
 
-
+    <script src="../js/config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -279,8 +319,9 @@
 
 
     <script src="../js/formulario.js"></script>
-    <script src="../js/sidebars.js"></script>
     <script src="../js/hora.js"></script>
+    <script src="../js/sidebars.js"></script>
+
 
 
 </body>

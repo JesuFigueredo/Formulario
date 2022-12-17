@@ -11,6 +11,9 @@
     <!--Titulo-->
     <title>Formulario Web Dashboard</title>
     <link rel="stylesheet" href="../css/styleweb.css">
+    <script src="../js/home.js"></script>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3447/3447560.png" type="image/x-icon">
+
 
 
 
@@ -43,7 +46,8 @@
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                 <li><a href="index.html" class="link-dark rounded">Home</a></li>
                                 <li><a href="formulario.html" class="link-dark rounded">Formulario</a></li>
-                                <li><a href="registro.html" class="link-dark rounded">Registros</a></li>
+                                <li><a href="registro.html" class="link-dark rounded"
+                                        style="background-color: green;">Registros</a></li>
 
                             </ul>
                         </div>
@@ -57,10 +61,45 @@
                         </button>
                         <div class="collapse" id="account-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">New...</a></li>
-                                <li><a href="#" class="link-dark rounded">Profile</a></li>
-                                <li><a href="#" class="link-dark rounded">Settings</a></li>
+
                                 <li><a href="#" class="link-dark rounded">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-4 bg-white lateral1">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                    <span class="fs-5 fw-semibold"><i class="bi bi-ui-checks-grid"></i></span>
+                </a>
+                <ul class="list-unstyled ps-0">
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="true">
+                            <i class="bi bi-collection-fill"></i>
+                        </button>
+                        <div class="collapse show" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="index.html" class="link-dark rounded"><i class="bi bi-house-fill"></i></a>
+                                </li>
+                                <li><a href="formulario.html" class="link-dark rounded"><i
+                                            class="bi bi-ui-checks-grid"></i></a></li>
+                                <li><a href="#" class="link-dark rounded"><i class="bi bi-card-checklist"
+                                            style="background-color: green;"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#account-collapse" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+                                <li><a href="#" class="link-dark rounded"><i class="bi bi-box-arrow-left"></i></a></li>
                             </ul>
                         </div>
                     </li>

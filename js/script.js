@@ -47,6 +47,9 @@ cambia.addEventListener("click", function () {
         nombre.style.display = 'block';
         p2.innerHTML = "Si ya tienes una cuenta por favor inicia sesion aqui";
         email.style.color = "white";
+        nombre.style.borderBottom = "white thin solid";
+        email.style.borderBottom = "white thin solid";
+        password.style.borderBottom = "white thin solid";
         email.value = "";
         password.style.color = "white";
         password.value = "";
@@ -89,8 +92,8 @@ async function sendData(login) {
         if (!response.ok) {
             const message = response.status;
             if (message == 400) {
-                email.style.color = "red";
-                password.style.color = "red";
+                email.style.borderBottom = "red thin solid";
+                password.style.borderBottom = "red thin solid";
                 alert.style.display = "block";
                 setTimeout(function () {
                     alert.style.display = "none";
@@ -116,4 +119,5 @@ login.addEventListener('submit', (e) => {
     sendData(login);
 
 })
+
 

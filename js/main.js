@@ -68,11 +68,10 @@ function recargar() {
     var direccion = document.getElementById("direccion");
     var comentario = document.getElementById("comentario");
 
-
-
-
-
     //console.log(dia, hora.childNodes[0].textContent);
+    var salida;
+    let titulo;
+    var button;
     async function sendData(fast) {
         var raw = JSON.stringify({
             "data": {
@@ -87,55 +86,55 @@ function recargar() {
 
             }
         });
-        var salida;
-        let titulo;
-        var button;
-        try {
-            const formData = new FormData(fast)
-            const queryString = new URLSearchParams(formData).toString()
-            const response = await fetch(enlace + "/warnings", {
-                method: "POST",
-                body: raw, headers: {
-                    "Authorization": "Bearer " + gettoken,
-                    "Content-Type": "application/json"
-                },
+        if (aviso.value == "") {
+            titulo = "warning";
+            salida = "Debe de Rellenar los campos de N.Aviso y Tarea";
+            button = true;
+            console.log("aqui1");
+        } else {
+            try {
+                const formData = new FormData(fast)
+                const queryString = new URLSearchParams(formData).toString()
+                const response = await fetch(enlace + "/warnings", {
+                    method: "POST",
+                    body: raw, headers: {
+                        "Authorization": "Bearer " + gettoken,
+                        "Content-Type": "application/json"
+                    },
 
 
-            });
+                });
 
 
-            if (!response.ok) {
-                const message = response.status;
-                titulo = "error";
-                button = true;
+                if (!response.ok) {
+                    const message = response.status;
+                    titulo = "error";
+                    button = true;
+                    switch (message) {
+                        case 400:
+                            salida = "Error al enviar los datos";
+                            break;
+                        case 404:
+                            salida = "no se ha encontrado la web";
+                            break;
 
-                switch (message) {
-                    case 400:
-                        salida = "Error al enviar los datos";
-                        break;
-                    case 404:
-                        salida = "no se ha encontrado la web";
-                        break;
+                        default:
+                            salida = "Error desconocido";
+                            break;
+                    }
+                    throw new Error(message);
+                } else {
+                    titulo = "success";
+                    salida = "Registro completado";
+                    button = false;
 
-                    default:
-                        salida = "Error desconocido";
-                        break;
                 }
-
-
-
-                throw new Error(message);
-            } else {
-                titulo = "success";
-                salida = "Registro completado";
-                button = false;
-
+            } catch (error) {
+                console.log(error);
             }
-        } catch (error) {
 
-            console.log(error);
+
         }
-
         function pregunta() {
 
             swal({
@@ -154,6 +153,7 @@ function recargar() {
 
             });
         }
+
         setTimeout(function () {
             //location.reload();
 
@@ -163,6 +163,8 @@ function recargar() {
             boton.style.opacity = 1;
         }, 1000)
     }
+
+
     sendData(fast);
 
 
@@ -177,9 +179,9 @@ function recargar() {
 
     /*if (toastTrigger) {
         toastTrigger.addEventListener('click', () => {
-
-
-
+ 
+ 
+ 
         })
     }*/
 
