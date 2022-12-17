@@ -16,6 +16,9 @@ body {
     min-height: 100%;
 }
 
+.user {
+    color: #fff;
+}
 
 main {
     display: grid;
@@ -240,7 +243,7 @@ main {
     column-gap: 5%;
     margin-top: 30px;
     width: 90%;
-    height: 50vh;
+    height: auto;
     margin-bottom: 30px;
     margin-left: 50px;
     background: #FFFFFF;

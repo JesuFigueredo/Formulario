@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Bienvenido</title>
 </head>
 
@@ -42,16 +43,25 @@
                     </div>
                 </div>
                 <p class="cuenta-gratis"></p>
-                <input type="text" id="nombre" name="name" placeholder="Nombre">
+                <input type="text" id="username" name="username" placeholder="Nombre">
                 <input type="email" id="email" name="email" placeholder="Email">
-                <input type="hidden" name="username" id="username">
+
                 <input type="password" id="pass" name="password" placeholder="Contraseña">
                 <button type="submit" id="boton">Registrarse</button>
+
+
             </form>
         </div>
 
+        <div class="alert" id="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Email o contraseña incorrecto.
+        </div>
 
     </header>
+
+
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
     <script src="js/particles.min.js"></script> <!-- stats.js lib -->
     <script src="js/particulas.js"></script>

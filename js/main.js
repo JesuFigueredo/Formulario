@@ -1,3 +1,5 @@
+var gettoken = localStorage.getItem("data_token");
+
 /*Popover*/
 $(function () {
     $("[data-toggle=popover]").popover({
@@ -37,8 +39,8 @@ function actualizar() { //función del temporizador
     mireloj.innerHTML = mihora; //incluir hora en elemento
 }
 setInterval(actualizar, 1000); //iniciar temporizador
+
 /*Fecha */
-// 
 var today = new Date();
 var day = today.getDate();
 var month = today.getMonth() + 1;
@@ -65,3 +67,5 @@ function recargar() {
 }
 
 document.getElementById("enviar").addEventListener("click", recargar);
+
+

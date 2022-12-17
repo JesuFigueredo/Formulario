@@ -215,46 +215,49 @@
             </div>
         </div>
         <!--Contenedores-->
+
         <div class="formulario">
-            <div class="valores">
-                <div class="item1">
-                    <h4>Fecha y Hora</h4>
-                    <input type="datetime-local" id="fecha_hora">
-                </div>
-                <div class="item2">
-                    <h4>N. de Aviso</h4>
-                    <input type="text" placeholder="Número de aviso" required>
-                </div>
-                <div class="item3">
-                    <h4>Técnico</h4>
-                    <select name="select" class="select1" required>
-                        <option value="value1" selected disabled>Seleccionar</option>
-                        <option value="value2">T.Propio</option>
-                        <option value="value3">T.Proveedor</option>
-                    </select>
-                </div>
-                <div class="item4">
-                    <h4>Tarea</h4>
-                    <input type="text" placeholder="Escribe la tarea a realizar" required>
-                </div>
-                <div class="item5">
-                    <h4>Población</h4>
-                    <input type="text" placeholder="Escribe la población" required>
-                </div>
-                <div class="item6">
-                    <h4>Dirección</h4>
-                    <input type="text" placeholder="Escribe la dirección" required>
-                </div>
-                <div class=" item7">
-                    <h4>Comentarios</h4>
-                    <textarea name="comentarios" rows="10" cols="40"
-                        placeholder="Escribe tu comentario, no es un campo requerido "></textarea>
-                </div>
+            <form id="form">
+                <div class="valores">
+                    <div class="item1">
+                        <h4>Fecha y Hora</h4>
+                        <input type="datetime-local" id="fecha_hora" name="fecha_hora">
+                    </div>
+                    <div class="item2">
+                        <h4>N. de Aviso</h4>
+                        <input type="text" placeholder="Número de aviso" id="aviso" name="aviso" required>
+                    </div>
+                    <div class="item3">
+                        <h4>Técnico</h4>
+                        <select name="select" class="select1" id="select" name="select" required>
+                            <option value="value1" selected disabled>Seleccionar</option>
+                            <option value="value2">T.Propio</option>
+                            <option value="value3">T.Proveedor</option>
+                        </select>
+                    </div>
+                    <div class="item4">
+                        <h4>Tarea</h4>
+                        <input type="text" placeholder="Escribe la tarea a realizar" id="tarea" name="tarea" required>
+                    </div>
+                    <div class="item5">
+                        <h4>Población</h4>
+                        <input type="text" placeholder="Escribe la población" name="población" id="poblacion" required>
+                    </div>
+                    <div class="item6">
+                        <h4>Dirección</h4>
+                        <input type="text" placeholder="Escribe la dirección" id="direccion" name="direccion" required>
+                    </div>
+                    <div class=" item7">
+                        <h4>Comentarios</h4>
+                        <textarea name="comentarios" rows="10" cols="40"
+                            placeholder="Escribe tu comentario, no es un campo requerido " id="comentarios"></textarea>
+                    </div>
 
-            </div>
-            <button type="button" class="btn btn-success guardar">Guardar</button>
-
+                </div>
+                <button type="submit" class="btn btn-success guardar">Guardar</button>
+            </form>
         </div>
+
 
 
 
@@ -275,7 +278,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
 
 
-
+    <script src="../js/formulario.js"></script>
     <script src="../js/sidebars.js"></script>
     <script src="../js/hora.js"></script>
 

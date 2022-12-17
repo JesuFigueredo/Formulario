@@ -223,3 +223,35 @@ header .welcome-back {
         margin-top: 30%;
     }
 }
+
+.alert {
+    display: none;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}

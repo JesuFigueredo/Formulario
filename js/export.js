@@ -3,7 +3,7 @@ var fecha = hoy.getDate() + '/' + (hoy.getMonth() + 1) + '/' + hoy.getFullYear()
 var hora = hoy.getHours() + ':' + hoy.getMinutes();
 var now = fecha + '_' + hora;
 
-document.getElementById("export").addEventListener("click", exportar);
+//document.getElementById("export").addEventListener("click", exportar);
 
 function exportar() {
 
