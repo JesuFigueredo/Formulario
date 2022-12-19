@@ -50,39 +50,38 @@ var fecha = document.getElementById("fecha").innerText = dia; //buscar elemento 
 
 $('#reload').hide()
 
+const boton = document.getElementById("enviar");
+var botonfast = document.getElementById("registrofast");
+var hora = document.getElementById("reloj");
+var fast = document.getElementById("fast");
+
+
+var aviso = document.getElementById("aviso");
+var tecnico = document.getElementById("select");
+var tarea = document.getElementById("tarea");
+var poblacion = document.getElementById("poblacion");
+var direccion = document.getElementById("direccion");
+var comentario = document.getElementById("comentario");
+
 
 
 function recargar() {
-
-    const boton = document.getElementById("enviar");
-    var botonfast = document.getElementById("registrofast");
-    var hora = document.getElementById("reloj");
-    var fast = document.getElementById("fast");
-    var datetime = dia + " " + hora.childNodes[0].textContent;
-    //const date = new Date(datetime);
-    const d = new Date(dia + "T" + hora.childNodes[0].textContent);
-    var aviso = document.getElementById("aviso");
-    var tecnico = document.getElementById("select");
-    var tarea = document.getElementById("tarea");
-    var poblacion = document.getElementById("poblacion");
-    var direccion = document.getElementById("direccion");
-    var comentario = document.getElementById("comentario");
-
-    //console.log(dia, hora.childNodes[0].textContent);
     var salida;
     let titulo;
     var button;
+
+
     async function sendData(fast) {
         var raw = JSON.stringify({
             "data": {
-                "datetime": Date.parse(d),
+                "datetime": fecha_hora,
                 "numberwarning": aviso.value,
                 "technical": tecnico.value,
                 "task": tarea.value,
                 "population": poblacion.value,
                 "address": direccion.value,
                 "comment": comentario.value,
-                "modific": Date.parse(d)
+                "modific": fecha_hora
 
             }
         });

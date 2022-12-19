@@ -222,6 +222,71 @@
         </div>
       </div>
     </div>
+    <!--Modaleditar-->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Editar Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="edit">
+              <div class="row">
+                <div class="col-md-6">
+                  <label for="recipient-name" class="col-form-label">Fecha y Hora:</label>
+                  <input type="datetime-local" id="fecha_hora1" class="form-control" name="fecha_hora1">
+                </div>
+                <div class="col-md-6">
+                  <label for="recipient-name" class="col-form-label">Aviso:</label>
+
+                  <input type="text" class="form-control" id="aviso1" name="aviso1" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="recipient-name" class="col-form-label">Técnico:</label>
+
+
+                  <select name="select" class=" form-control" id="select1" name="select1" required>
+                    <option selected disabled>Seleccionar</option>
+                    <option value="self">T.Propio</option>
+                    <option value="supplier">T.Proveedor</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="recipient-name" class="col-form-label">Tarea:</label>
+
+                  <input type="text" class="form-control" id="tarea1" name="tarea1" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Población:</label>
+                <input type="text" class="form-control" id="poblacion1" name="poblacion1" required>
+
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Dirección:</label>
+                <input type="text" class="form-control" id="direccion1" name="direccion1" required>
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Comentario:</label>
+                <input type="text" class="form-control" id="comentario1" name="comentario1">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button class="btn btn-primary" type="button" id="enviar1">
+
+              Enviar
+              <span class="spinner-border spinner-border-sm" id="reload1" role="status" aria-hidden="true"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <!--ModalNotifi-->
     <div class="offcanvas offcanvas-end text-bg-dark w-25" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
       id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -327,7 +392,7 @@
           </div>
         </div>
       </div>
-      <table class="table table-hover table-sm-responsive">
+      <table class="table table-hover table-sm-responsive" id="tabla1">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -368,11 +433,12 @@
 
   <script src="../js/grafica.js"></script>
   <script src="../js/newregistro.js"></script>
-
+  <script src="../js/hora.js"></script>
   <script src="../js/start.js"></script>
   <script src="../js/ultimoregistro.js"></script>
   <script src="../js/export.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/editar.js"></script>
 
 
 

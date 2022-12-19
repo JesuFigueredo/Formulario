@@ -242,10 +242,11 @@ main {
     grid-row: 7/span 8;
     column-gap: 5%;
     margin-top: 30px;
-    width: 93%;
+    width: auto;
     height: auto;
     margin-bottom: 30px;
     margin-left: 30px;
+    margin-right: 30px;
     background: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;

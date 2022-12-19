@@ -1,7 +1,7 @@
-async function registros() {
+async function registros1() {
     try {
         const formData = new FormData()
-        const response = await fetch(enlace + "/warnings?sort[0]=modific%3Adesc&pagination[pageSize]=5", {
+        const response = await fetch(enlace + "/warnings", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + gettoken,
@@ -25,7 +25,7 @@ async function registros() {
 
 
 
-        //console.log(data.data);
+
         let hilera = "";
         let n = 1;
         for (var i = 0; i < data.data.length; i++) {
@@ -37,13 +37,15 @@ async function registros() {
             var salid2 = cambio.substring(0, cambio.length - resta2);
             var salid3 = datos[0][i].id;
 
-            console.log();
+
             hilera += "<tr>";
             let boton = '<div class="dropdown"><button class="btn" type = "button" id = "dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v" ></i></button></i><div class="dropdown-menu dropdown2" aria-labelledby="dropdownMenuButton"><a class="dropdown-item item1" onclick="editar(' + salid3 + ')" data-bs-toggle="modal" data-bs-target="#exampleModal1"> <i class="bi bi-pencil-fill"></i> Editar</a ><a class="dropdown-item item2" href="javascript:borrar(' + salid3 + ')"><i class="bi bi-trash"></i> Borrar</a><a class="dropdown-item item3" href="javascript:exportar(' + salid3 + ')"><i class="bi bi-box-arrow-in-down" ></i> Exportar</a></div > ';
             hilera += "<th scope=row>" + n++ + "</th>";
 
-            hilera += "<td>" + salid2 + "</td>";
+
+
             hilera += "<td>" + datos[0][i].attributes.numberwarning + "</td>";
+            hilera += "<td>" + salid2 + "</td>";
             var tecnico;
             if (datos[0][i].attributes.technical == "self") {
                 var tecnico = "Propio";
@@ -68,14 +70,14 @@ async function registros() {
 
 
 
-            document.getElementById("tabla").innerHTML = hilera;
+            document.getElementById("tabla2").innerHTML = hilera;
         }
 
 
 
     } catch (error) {
-
+        console.log(error);
 
     }
 }
-registros();
+registros1();

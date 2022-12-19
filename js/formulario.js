@@ -2,10 +2,10 @@ var hoy = new Date()
 var fecha = hoy.getFullYear() + '-' + ('0' + (hoy.getMonth() + 1)).slice(-2) + '-' + ('0' + hoy.getDate()).slice(-2);
 var hora = ('0' + hoy.getHours()).slice(-2) + ':' + ('0' + hoy.getMinutes()).slice(-2);
 
-var fecha_hora = fecha + 'T' + hora;
-document.getElementById('fecha_hora').value = fecha_hora;
+var datetime = fecha + 'T' + hora;
 
-const login = document.getElementById("form");
+
+const form = document.getElementById("form");
 var gettoken = localStorage.getItem("data_token");
 var respuesta = enlace + "/warnings";
 var hora = document.getElementById("fecha_hora");
@@ -15,27 +15,31 @@ var tarea = document.getElementById("tarea");
 var poblacion = document.getElementById("poblacion");
 var dirección = document.getElementById("dirección");
 var comentario = document.getElementById("comentario");
+hora.value = datetime;
 
+const d = new Date();
 
-
-async function sendData(login) {
-    const d = new Date(hora.value);
+async function sendData(form) {
+    var hora = document.getElementById("fecha_hora");
     var raw = JSON.stringify({
         "data": {
-            "datetime": Date.parse(d),
+            "datetime": hora.value,
             "numberwarning": aviso.value,
             "technical": tecnico.value,
             "task": tarea.value,
             "population": poblacion.value,
             "address": direccion.value,
             "comment": comentario.value,
-            "modific": Date.parse(d)
+            "modific": datetime
+
 
         }
     });
 
+
     try {
-        const formData = new FormData(login)
+
+        const formData = new FormData(form)
         const queryString = new URLSearchParams(formData).toString()
         const response = await fetch(respuesta, {
             method: "POST",
@@ -95,8 +99,8 @@ async function sendData(login) {
     pregunta();
 }
 
-login.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    sendData(login);
+    sendData(form);
 
 })

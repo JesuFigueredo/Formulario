@@ -66,6 +66,7 @@ async function send3() {
         for (let i = 0; i < data1.data.length; i++) {
             var salida = data1.data[i].attributes.datetime;
             var cantidad = salida.length;
+
             var newStr = salida.indexOf("T");
             let resta = cantidad - newStr;
             var salid = salida.substring(0, salida.length - resta)
