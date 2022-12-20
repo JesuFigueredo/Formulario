@@ -134,10 +134,12 @@ function editar(i) {
 
             var hoy1 = new Date(data.data.attributes.datetime);
             var fecha1 = hoy1.getFullYear() + '-' + ('0' + (hoy1.getMonth() + 1)).slice(-2) + '-' + ('0' + hoy1.getDate()).slice(-2);
-            var hora1 = ('0' + hoy1.getHours()).slice(-2) - 1 + ':' + ('0' + hoy1.getMinutes()).slice(-2);
+            var obteniendohora = hoy1.getHours() - 1;
 
-            fecha_hora1.value = fecha1 + "T" + hora1;
-            console.log(data.data.id);
+            var hora1 = ('0' + obteniendohora).slice(-2) + ':' + ('0' + hoy1.getMinutes()).slice(-2) + ":00";
+            var datosdetiempo = fecha1 + 'T' + hora1;
+
+            fecha_hora1.value = datosdetiempo;
             aviso1.value = data.data.attributes.numberwarning;
             tecnico1.value = data.data.attributes.technical;
             tarea1.value = data.data.attributes.task;
@@ -146,7 +148,7 @@ function editar(i) {
             comentario1.value = data.data.attributes.comment;
 
             function edit1() {
-                $('#reload1').show();
+                $('#reload1').shide();
                 console.log("aki")
                 async function sendedit() {
                     console.log(aviso1.value);

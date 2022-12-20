@@ -224,6 +224,8 @@ main {
     font-size: 40px;
 }
 
+
+
 .grafico {
     grid-column: 2/ span 3;
     grid-row: 3/span 4;

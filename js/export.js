@@ -138,6 +138,9 @@ function exportar(i) {
     desca(i)
 
 }
+function exportartodo() {
+
+}
 
 
 

@@ -1,4 +1,4 @@
-//var busqueda = document.getElementById('buscar');
+var busqueda = document.getElementById('buscar');
 var tabl = document.getElementById("tabla");
 var table = tabl.tBodies[0];
 
