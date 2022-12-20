@@ -148,7 +148,7 @@ function editar(i) {
             comentario1.value = data.data.attributes.comment;
 
             function edit1() {
-                $('#reload1').shide();
+                $('#reload1').hide();
                 console.log("aki")
                 async function sendedit() {
                     console.log(aviso1.value);
