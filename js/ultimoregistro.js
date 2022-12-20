@@ -54,8 +54,8 @@ async function registros() {
             }
 
             hilera += "<td>" + tecnico + "</td>";
-            hilera += "<td>" + datos[0][i].attributes.task + "</td>";
-            hilera += "<td>" + datos[0][i].attributes.population + "</td>";
+            hilera += "<td class=ocultar>" + datos[0][i].attributes.task + "</td>";
+            hilera += "<td class=ocultar>" + datos[0][i].attributes.population + "</td>";
             hilera += "<td>" + datos[0][i].attributes.address + "</td>";
             if (datos[0][i].attributes.comment == null) {
                 hilera += "<td></td>";

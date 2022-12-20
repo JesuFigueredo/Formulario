@@ -99,6 +99,49 @@
         </ul>
       </div>
     </div>
+    <div class="barralateral1">
+      <div class="p-4 bg-white lateral">
+        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+          <i class="bi bi-info-square-fill"></i>
+
+        </a>
+        <ul class="list-unstyled ps-0">
+
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#dashboard-collapse" aria-expanded="true">
+              <i class="bi bi-bookmark"></i>
+            </button>
+            <div class="collapse show" id="dashboard-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="index.html" class="link-dark rounded" style="background-color: green;"><i
+                      class="bi bi-house"></i></a></li>
+                <li><a href="formulario.html" class="link-dark rounded"><i class="bi bi-input-cursor"></i></a></li>
+                <li><a href="registro.html" class="link-dark rounded"><i class="bi bi-table"></i></a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="mb-1">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#account-collapse" aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <div class="collapse" id="account-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+
+                <li><a href="javascript:salida()" class="link-dark rounded"><i class="bi bi-box-arrow-left"></i></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
     <div class="b-divider"></div>
     <!--Barra horizontal-->
     <div class="barrahorizontal">
@@ -399,8 +442,8 @@
             <th scope="col">Fecha/Hora</th>
             <th scope="col">Aviso</th>
             <th scope="col">Técnico</th>
-            <th scope="col">Tarea</th>
-            <th scope="col">Población</th>
+            <th scope="col" class="ocultar">Tarea</th>
+            <th scope="col" class="ocultar">Población</th>
             <th scope="col">Dirección</th>
             <th scope="col">Comentario</th>
             <th scope="col">Option</th>
