@@ -6,11 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/particulas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3447/3447560.png" type="image/x-icon">
+
     <title>Bienvenido</title>
 </head>
 
@@ -27,7 +30,7 @@
                     <button class="sign-up" id="botoncambia">Iniciar Sesión</button>
                 </div>
             </div>
-            <form class="formulario" id="form" action="web/index.html">
+            <form class="formulario" id="form">
                 <h2 class="create-account" id="titulo">Crear cuenta</h2>
                 <div class="iconos ">
                     <div class="border-icon">
@@ -41,18 +44,27 @@
                     </div>
                 </div>
                 <p class="cuenta-gratis"></p>
-                <input type="text" id="nombre" placeholder="Nombre">
-                <input type="email" id="email" placeholder="Email">
-                <input type="password" id="pass" placeholder="Contraseña">
-                <button type="button" id="boton">Registrarse</button>
+                <input type="text" id="username" name="username" placeholder="Nombre">
+                <input type="email" id="email" name="email" placeholder="Email">
+
+                <input type="password" id="pass" name="password" placeholder="Contraseña">
+                <button type="submit" id="boton">Registrarse</button>
+
+
             </form>
         </div>
 
+        <div class="alert" id="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            Email o contraseña incorrecto.
+        </div>
 
     </header>
+
+
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
     <script src="js/particles.min.js"></script> <!-- stats.js lib -->
-    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="js/particulas.js"></script>
     <script src="js/start.js"></script>
 </body>

@@ -29,10 +29,13 @@ var table = tabl.tBodies[0];
 }*/
 $(document).ready(function () {
     $('#tabla').DataTable({
-        //paging: false,//pag
+        sProcessing: "Procesando...",
+        paging: false,//pag
         filter: false,
         dom: '<lf<t>ip>',
-        scrollX: false,
+        scrollX: true,
+        responsive: true,
+
         language: {
             "decimal": "",
             "emptyTable": "No hay información",
@@ -67,17 +70,9 @@ $(document).ready(function () {
                 visible: false,
             },
         ],*///ocultar columna*/
-        //order: [[0, 'desc']],orden por el que comienza
+        //order: [[0, 'asc']], //orden por el que comienza
+        paging: true,
 
-        columnDefs: [
-            {
-                render: function (data, type, row) {
-                    return data + ' (' + row[1] + ')';
-                },
-                targets: 0,
-            },
-            { visible: false, targets: [0] },
-        ],
     });
 
 });

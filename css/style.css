@@ -12,45 +12,12 @@
 
 body {
     background: #000;
-
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-/* ---- particles.js container ---- */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-
-}
-
-/* ---- stats.js ---- */
-
-
-.js-count-particles {
-    font-size: 1.1em;
-}
-
-#stats,
-.count-particles {
-    -webkit-user-select: none;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-
-#stats {
-    border-radius: 3px 3px 0 0;
-    overflow: hidden;
-}
-
-.count-particles {
-    border-radius: 0 0 3px 3px;
 }
 
 header {
@@ -62,8 +29,8 @@ header {
     height: 100vh;
     display: grid;
     grid-template-columns: auto auto auto;
+    transition-property: all 4s;
 
-    transition: all .5s ease-out;
 }
 
 
@@ -74,15 +41,18 @@ header .welcome-back {
     margin-top: 50%;
     align-items: center;
     text-align: center;
+
 }
 
 .message {
-    padding: 1rem;
+    padding: 10%;
 }
 
 .message h2 {
     font-size: 1.7rem;
     padding: 1rem 0;
+    transition: opacity .35s;
+
 }
 
 .message button {
@@ -95,7 +65,9 @@ header .welcome-back {
     cursor: pointer;
     font-size: .9rem;
     margin-top: 2rem;
-    transition: all .3s ease-in;
+    transition: opacity .35s;
+
+
     color: #fff;
 }
 
@@ -113,6 +85,7 @@ header .welcome-back {
     background-color: rgb(51, 51, 51, 0.602);
     text-align: center;
     border-radius: 10%;
+
 }
 
 
@@ -166,6 +139,7 @@ header .welcome-back {
     padding: .2rem 0;
     font-size: .9rem;
     color: white;
+
 }
 
 
@@ -202,9 +176,83 @@ header .welcome-back {
     visibility: visible;
 }
 
-
-
 .sign-up {
     opacity: 1;
     visibility: visible;
+}
+
+
+/*Display max 480px*/
+@media screen and (max-width: 780px) {
+    .container-form {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
+
+    .message {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .formulario {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .container-form {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+
+    }
+
+    .message {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: center;
+        margin-top: 50%;
+    }
+
+    .formulario {
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: center;
+        margin-top: 30%;
+    }
+}
+
+.alert {
+    display: none;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
 }
